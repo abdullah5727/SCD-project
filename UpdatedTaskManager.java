@@ -16,7 +16,9 @@ public class TaskManager {
     }
 
     public void deleteTask(int index) {
-        if (index >= 0 && index < taskList.size()) {
+        if (index > -1 && index < taskList.size()) {
+            Task t = taskList.get(index);
+            System.out.println("Deleting task: " + t.getTitle());
             taskList.remove(index);
         }
     }
